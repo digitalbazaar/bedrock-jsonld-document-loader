@@ -1,0 +1,9 @@
+*.log
+*~
+.nyc_output
+.project
+.settings
+TAGS
+coverage
+node_modules
+reports

@@ -1,0 +1,13 @@
+{
+  "name": "bedrock-jsonld-document-loader-test",
+  "version": "0.0.1-0",
+  "private": true,
+  "scripts": {
+    "test": "node --preserve-symlinks test test"
+  },
+  "dependencies": {
+    "bedrock": "digitalbazaar/bedrock#remove-jsonld",
+    "bedrock-jsonld-document-loader": "file:..",
+    "bedrock-test": "digitalbazaar/bedrock-test#4.x"
+  }
+}
