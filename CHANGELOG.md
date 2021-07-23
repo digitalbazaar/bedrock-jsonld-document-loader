@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 1.1.0 - 2021-07-xx
+## 1.1.0 - 2021-07-23
 
 ### Changed
 - Update peer dependencies; use bedrock@4.
