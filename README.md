@@ -60,6 +60,24 @@ import {documentLoader} from 'bedrock-jsonld-document-loader';
 const {documentLoader} = require('bedrock-jsonld-document-loader');
 ```
 
+### Enabling the web protocol handler
+
+```js
+import bedrock from 'bedrock';
+const {config: {'your-project': cfg}} = bedrock;
+
+// Import the loader instance, and not the 'documentLoader' function directly.
+import {jsonLdDocumentLoader} from 'bedrock-jsonld-document-loader';
+
+// if enabled, add loader for remote documents
+if(cfg.documentLoader.mode === 'web') {
+  jsonLdDocumentLoader.setProtocolHandler({protocol: 'http', handler: webProtocolHandler});
+  jsonLdDocumentLoader.setProtocolHandler({protocol: 'https', handler: webProtocolHandler});
+}
+
+export const documentLoader = jsonLdDocumentLoader.build();
+```
+
 ## Contribute
 
 See [the contribute file](https://github.com/digitalbazaar/bedrock/blob/master/CONTRIBUTING.md)!
