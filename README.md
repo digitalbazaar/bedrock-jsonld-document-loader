@@ -49,10 +49,9 @@ npm install
 
 This library exports the following things:
 
-1. A `JsonLdDocumentLoader` class object.
-2. A `jsonLdDocumentLoader` instance.
-3. A default `documentLoader` function (with an instance bound to it).
-4. A `webProtocolHandler`, for use with `cfg.documentLoader.mode === 'web'`.
+1. A `jsonLdDocumentLoader` instance.
+2. A default `documentLoader` function (with an instance bound to it).
+3. A `webProtocolHandler`, for use with `cfg.documentLoader.mode === 'web'`.
 
 ```js
 import {documentLoader} from 'bedrock-jsonld-document-loader';
