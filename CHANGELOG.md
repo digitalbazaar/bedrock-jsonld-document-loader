@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 1.2.0 -
+## 1.2.0 - 2021-08-30
 
 ### Added
 - Add an httpClient protocol handler for web documentLoaders.
