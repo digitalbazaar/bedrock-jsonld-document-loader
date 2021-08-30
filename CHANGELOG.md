@@ -3,7 +3,7 @@
 ## 1.2.0 -
 
 ### Added
-- Add web protocol handler for web documentLoaders.
+- Add an httpClient protocol handler for web documentLoaders.
 
 ## 1.1.0 - 2021-07-23
 

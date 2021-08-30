@@ -51,7 +51,7 @@ This library exports the following things:
 
 1. A `jsonLdDocumentLoader` instance.
 2. A default `documentLoader` function (with an instance bound to it).
-3. A `webProtocolHandler`, for use with `cfg.documentLoader.mode === 'web'`.
+3. An `httpClientHandler`, for use with `cfg.documentLoader.mode === 'web'`.
 
 ```js
 import {documentLoader} from 'bedrock-jsonld-document-loader';
@@ -59,19 +59,19 @@ import {documentLoader} from 'bedrock-jsonld-document-loader';
 const {documentLoader} = require('bedrock-jsonld-document-loader');
 ```
 
-### Enabling the web protocol handler
+### Enabling the HTTP/HTTPS protocol handler
 
 ```js
 import bedrock from 'bedrock';
 const {config: {'your-project': cfg}} = bedrock;
 
 // Import the loader instance, and not the 'documentLoader' function directly.
-import {jsonLdDocumentLoader} from 'bedrock-jsonld-document-loader';
+import {jsonLdDocumentLoader, httpClientHandler} from 'bedrock-jsonld-document-loader';
 
 // if enabled, add loader for remote documents
 if(cfg.documentLoader.mode === 'web') {
-  jsonLdDocumentLoader.setProtocolHandler({protocol: 'http', handler: webProtocolHandler});
-  jsonLdDocumentLoader.setProtocolHandler({protocol: 'https', handler: webProtocolHandler});
+  jsonLdDocumentLoader.setProtocolHandler({protocol: 'http', handler: httpClientHandler});
+  jsonLdDocumentLoader.setProtocolHandler({protocol: 'https', handler: httpClientHandler});
 }
 
 export const documentLoader = jsonLdDocumentLoader.build();
