@@ -6,8 +6,8 @@
     "test": "node --preserve-symlinks test test"
   },
   "dependencies": {
-    "bedrock": "digitalbazaar/bedrock#remove-jsonld",
+    "bedrock": "^4.4.0",
     "bedrock-jsonld-document-loader": "file:..",
-    "bedrock-test": "digitalbazaar/bedrock-test#4.x"
+    "bedrock-test": "^5.4.0"
   }
 }

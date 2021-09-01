@@ -41,6 +41,7 @@ describe('bedrock-jsonld-document-loader', () => {
       contextUrl: null,
       document: sampleDoc,
       documentUrl,
+      tag: 'static'
     });
   });
 });
