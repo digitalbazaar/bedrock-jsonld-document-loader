@@ -3,7 +3,6 @@
  */
 'use strict';
 
-const {util: {uuid}} = require('bedrock');
 const {documentLoader, jsonLdDocumentLoader, httpClientHandler} =
   require('bedrock-jsonld-document-loader');
 
@@ -89,7 +88,7 @@ describe('httpClientHandler', () => {
   it('throws error if url does not start with "http"', async () => {
     let result;
     let error;
-    const url = `urn:zcap:${uuid()}`;
+    const url = `urn:zcap:xyz`;
 
     try {
       result = await httpClientHandler.get({url});
