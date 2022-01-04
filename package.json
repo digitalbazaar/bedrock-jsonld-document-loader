@@ -26,11 +26,11 @@
   "homepage": "https://github.com/digitalbazaar/bedrock-jsonld-document-loader",
   "dependencies": {
     "@digitalbazaar/http-client": "^1.2.0",
-    "bedrock-https-agent": "^2.1.0",
     "jsonld-document-loader": "^1.0.0"
   },
   "peerDependencies": {
-    "bedrock": "^4.3.0"
+    "bedrock": "^4.3.0",
+    "bedrock-https-agent": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
