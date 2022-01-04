@@ -3,11 +3,25 @@
   "version": "0.0.1-0",
   "private": true,
   "scripts": {
-    "test": "node --preserve-symlinks test test"
+    "test": "node --preserve-symlinks test test",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-summary npm test",
+    "coverage-ci": "cross-env NODE_ENV=test nyc --reporter=lcov npm test",
+    "coverage-report": "nyc report"
   },
   "dependencies": {
     "bedrock": "^4.4.0",
     "bedrock-jsonld-document-loader": "file:..",
-    "bedrock-test": "^5.4.0"
+    "bedrock-test": "^5.4.0",
+    "cross-env": "^7.0.2",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "excludeNodeModules": false,
+    "include": [
+      "node_modules/bedrock-jsonld-document-loader/**"
+    ],
+    "exclude": [
+      "node_modules/bedrock-jsonld-document-loader/node_modules/**"
+    ]
   }
 }
