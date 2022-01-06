@@ -95,7 +95,7 @@ describe('bedrock-jsonld-document-loader', () => {
 });
 
 describe('httpClientHandler', () => {
-  it.only('properly gets document', async () => {
+  it('properly gets document', async () => {
     let result;
     let error;
     const documentUrl = `${BASE_URL}/documents/json`;
