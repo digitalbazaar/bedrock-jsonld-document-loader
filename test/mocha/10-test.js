@@ -88,7 +88,7 @@ describe('httpClientHandler', () => {
   it('throws error if url does not start with "http"', async () => {
     let result;
     let error;
-    const url = `urn:zcap:xyz`;
+    const url = 'urn:zcap:xyz';
 
     try {
       result = await httpClientHandler.get({url});
