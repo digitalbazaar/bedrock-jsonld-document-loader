@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 1.3.0 - 2022-TBD
+## 1.2.1 - 2022-TBD
 
 ### Added
 - Add additional tests.

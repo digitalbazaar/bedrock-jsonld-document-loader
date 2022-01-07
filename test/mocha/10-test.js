@@ -15,9 +15,6 @@ const BASE_URL = `https://localhost:${TEST_SERVER_PORT}`;
 const key = fs.readFileSync(__dirname + '/key.pem');
 const cert = fs.readFileSync(__dirname + '/cert.pem');
 
-// HTTPS agent that ignores TLS errors as test server has invalid cert
-// const agent = new https.Agent({rejectUnauthorized: false});
-
 function _startServer({app, port = TEST_SERVER_PORT}) {
   return new Promise(resolve => {
     const server = https.createServer({key, cert}, app);
