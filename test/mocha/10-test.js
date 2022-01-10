@@ -9,16 +9,17 @@ const express = require('express');
 const fs = require('fs');
 const https = require('https');
 
-const TEST_SERVER_PORT = 5000;
-const BASE_URL = `https://localhost:${TEST_SERVER_PORT}`;
+let BASE_URL;
 
 const key = fs.readFileSync(__dirname + '/key.pem');
 const cert = fs.readFileSync(__dirname + '/cert.pem');
 
-function _startServer({app, port = TEST_SERVER_PORT}) {
+function _startServer({app}) {
   return new Promise(resolve => {
     const server = https.createServer({key, cert}, app);
-    server.listen(port, () => {
+    server.listen(() => {
+      const {port} = server.address();
+      BASE_URL = `https://localhost:${port}`;
       console.log(`Test server listening at ${BASE_URL}`);
       return resolve(server);
     });
@@ -110,7 +111,7 @@ describe('httpClientHandler', () => {
         '@context': 'https://schema.org/',
         name: 'John Doe'
       },
-      documentUrl: 'https://localhost:5000/documents/json'
+      documentUrl: `${BASE_URL}/documents/json`
     });
   });
   it('throws error if url does not start with "http"', async () => {
