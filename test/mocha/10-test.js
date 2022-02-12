@@ -106,12 +106,8 @@ describe('httpClientHandler', () => {
     assertNoError(error);
     should.exist(result);
     result.should.eql({
-      contextUrl: null,
-      document: {
-        '@context': 'https://schema.org/',
-        name: 'John Doe'
-      },
-      documentUrl: `${BASE_URL}/documents/json`
+      '@context': 'https://schema.org/',
+      name: 'John Doe'
     });
   });
   it('throws error if url does not start with "http"', async () => {
