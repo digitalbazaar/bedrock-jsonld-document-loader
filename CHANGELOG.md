@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 1.2.2 - 2022-TBD
+## 1.2.2 - 2022-02-14
 
 ### Fixed
 - Fix return value for `httpClientHandler.get()`.
