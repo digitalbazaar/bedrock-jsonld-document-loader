@@ -1,5 +1,14 @@
 # bedrock-jsonld-document-loader ChangeLog
 
+## 1.3.0 - 2022-03-xx
+
+### Changed
+- Update peer deps:
+  - `bedrock@4.5`
+  - `bedrock-https-agent@2.3`.
+- Update internals to use esm style and use `esm.js` to
+  transpile to CommonJS.
+
 ## 1.2.2 - 2022-02-14
 
 ### Fixed
