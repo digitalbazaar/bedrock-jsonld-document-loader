@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 1.3.0 - 2022-03-xx
+## 1.3.0 - 2022-03-28
 
 ### Changed
 - Update peer deps:
