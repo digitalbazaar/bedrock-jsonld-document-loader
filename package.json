@@ -1,6 +1,6 @@
 {
   "name": "@bedrock/jsonld-document-loader",
-  "version": "2.0.2-0",
+  "version": "2.0.2",
   "type": "module",
   "description": "A document loader for jsonld.js.",
   "license": "SEE LICENSE IN LICENSE.md",
