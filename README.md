@@ -60,7 +60,7 @@ import {documentLoader} from '@bedrock/jsonld-document-loader';
 ### Enabling the HTTP/HTTPS protocol handler
 
 ```js
-import * as bedrock from 'bedrock';
+import * as bedrock from '@bedrock/core';
 const {config: {'your-project': cfg}} = bedrock;
 
 // Import the loader instance, and not the 'documentLoader' function directly.
