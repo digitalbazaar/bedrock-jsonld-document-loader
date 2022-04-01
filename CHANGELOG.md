@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 2.0.2 - 2022-04-xx
+## 2.0.2 - 2022-04-01
 
 ### Fixed
 - Use `jsdoc-to-markdown@7`.
