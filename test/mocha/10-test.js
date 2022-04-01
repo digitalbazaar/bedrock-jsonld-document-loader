@@ -7,6 +7,7 @@ import express from 'express';
 import {fileURLToPath} from 'url';
 import fs from 'fs';
 import https from 'https';
+import path from 'path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
