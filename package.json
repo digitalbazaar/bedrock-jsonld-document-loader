@@ -1,6 +1,7 @@
 {
-  "name": "bedrock-jsonld-document-loader",
+  "name": "@bedrock/jsonld-document-loader",
   "version": "1.3.1-0",
+  "type": "module",
   "description": "A document loader for jsonld.js.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": {
@@ -25,13 +26,12 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-jsonld-document-loader",
   "dependencies": {
-    "@digitalbazaar/http-client": "^1.2.0",
-    "esm": "^3.2.25",
+    "@digitalbazaar/http-client": "^2.0.0",
     "jsonld-document-loader": "^1.0.0"
   },
   "peerDependencies": {
-    "bedrock": "^4.5.0",
-    "bedrock-https-agent": "^2.3.0"
+    "@bedrock/core": "^5.0.0",
+    "@bedrock/https-agent": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -40,7 +40,7 @@
     "jsdoc-to-markdown": "^6.0.1"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=14"
   },
-  "main": "lib"
+  "main": "./lib/index.js"
 }

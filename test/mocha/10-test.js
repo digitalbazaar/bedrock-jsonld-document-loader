@@ -1,13 +1,14 @@
 /*!
- * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2019-2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
+import {documentLoader, jsonLdDocumentLoader, httpClientHandler} from
+  '@bedrock/jsonld-document-loader';
+import express from 'express';
+import {fileURLToPath} from 'url';
+import fs from 'fs';
+import https from 'https';
 
-const {documentLoader, jsonLdDocumentLoader, httpClientHandler} =
-  require('bedrock-jsonld-document-loader');
-const express = require('express');
-const fs = require('fs');
-const https = require('https');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let BASE_URL;
 
