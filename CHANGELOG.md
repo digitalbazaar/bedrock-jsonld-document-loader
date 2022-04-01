@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 2.0.0 - 2022-04-xx
+## 2.0.0 - 2022-04-01
 
 ### Changed
 - **BREAKING**: Rename package to `@bedrock/jsonld-document-loader`.
