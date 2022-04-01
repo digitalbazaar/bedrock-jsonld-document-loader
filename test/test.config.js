@@ -1,12 +1,13 @@
-/*
- * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
+/*!
+ * Copyright (c) 2019-2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
+import {config} from '@bedrock/core';
+import {fileURLToPath} from 'url';
+import path from 'path';
 
-const {config} = require('bedrock');
-const path = require('path');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+config.mocha.tests.push(path.join(__dirname, 'mocha'));
 
 // set this to false to ignore SSL errors in development
 config['https-agent'].rejectUnauthorized = false;
-
-config.mocha.tests.push(path.join(__dirname, 'mocha'));

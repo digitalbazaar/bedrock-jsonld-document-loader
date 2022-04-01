@@ -25,14 +25,14 @@ TBD
 
 ## Install
 
-- Node.js 12+ is required.
+- Node.js 14+ is required.
 
 ### NPM
 
 To install via NPM:
 
 ```
-npm install --save bedrock-jsonld-document-loader
+npm install --save @bedrock/jsonld-document-loader
 ```
 
 ### Development
@@ -54,19 +54,18 @@ This library exports the following things:
 3. An `httpClientHandler`, for use with `cfg.documentLoader.mode === 'web'`.
 
 ```js
-import {documentLoader} from 'bedrock-jsonld-document-loader';
-// or
-const {documentLoader} = require('bedrock-jsonld-document-loader');
+import {documentLoader} from '@bedrock/jsonld-document-loader';
 ```
 
 ### Enabling the HTTP/HTTPS protocol handler
 
 ```js
-import bedrock from 'bedrock';
+import * as bedrock from 'bedrock';
 const {config: {'your-project': cfg}} = bedrock;
 
 // Import the loader instance, and not the 'documentLoader' function directly.
-import {jsonLdDocumentLoader, httpClientHandler} from 'bedrock-jsonld-document-loader';
+import {jsonLdDocumentLoader, httpClientHandler} from
+  '@bedrock/jsonld-document-loader';
 
 // if enabled, add loader for remote documents
 if(cfg.documentLoader.mode === 'web') {
