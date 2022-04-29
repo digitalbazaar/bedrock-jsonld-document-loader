@@ -1,5 +1,12 @@
 # bedrock-jsonld-document-loader ChangeLog
 
+## 3.0.0 - 2022-04-xx
+
+### Changed
+- **BREAKING**: Update peer deps:
+  - `@bedrock/core@6`
+  - `@bedrock/https-agent@4`.
+
 ## 2.0.2 - 2022-04-01
 
 ### Fixed
