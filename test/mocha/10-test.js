@@ -4,10 +4,10 @@
 import {documentLoader, jsonLdDocumentLoader, httpClientHandler} from
   '@bedrock/jsonld-document-loader';
 import express from 'express';
-import {fileURLToPath} from 'url';
-import fs from 'fs';
-import https from 'https';
-import path from 'path';
+import {fileURLToPath} from 'node:url';
+import fs from 'node:fs';
+import https from 'node:https';
+import path from 'node:path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
