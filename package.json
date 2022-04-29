@@ -30,8 +30,8 @@
     "jsonld-document-loader": "^1.2.1"
   },
   "peerDependencies": {
-    "@bedrock/core": "^5.0.0",
-    "@bedrock/https-agent": "^3.0.0"
+    "@bedrock/core": "^6.0.0",
+    "@bedrock/https-agent": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
