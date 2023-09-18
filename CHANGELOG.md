@@ -5,6 +5,7 @@
 ### Changed
 - **BREAKING**: Drop support for Node.js < 18.
 - Use `@digitalbazaar/http-client@4`. This version requires Node.js 18+.
+- Use `jsonld-document-loader@2`. This version requires Node.js 16+.
 
 ## 3.0.0 - 2022-04-28
 
