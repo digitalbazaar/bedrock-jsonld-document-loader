@@ -1,5 +1,11 @@
 # bedrock-jsonld-document-loader ChangeLog
 
+## 5.0.0 - 2024-mm-dd
+
+### Changed
+- **BREAKING**: Add fetch options with default size and timeout limits
+  (16 KiB and 5 seconds, respectively) for `httpHandlerClient`.
+
 ## 4.0.0 - 2023-09-18
 
 ### Changed
