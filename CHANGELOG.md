@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 5.0.0 - 2024-mm-dd
+## 5.0.0 - 2024-03-17
 
 ### Changed
 - **BREAKING**: Add fetch options with default size and timeout limits
