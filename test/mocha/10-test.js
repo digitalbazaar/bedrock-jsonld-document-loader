@@ -1,8 +1,9 @@
 /*!
  * Copyright (c) 2019-2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {documentLoader, jsonLdDocumentLoader, httpClientHandler} from
-  '@bedrock/jsonld-document-loader';
+import {
+  documentLoader, httpClientHandler, jsonLdDocumentLoader
+} from '@bedrock/jsonld-document-loader';
 import express from 'express';
 import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';

@@ -34,10 +34,10 @@
     "@bedrock/https-agent": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-digitalbazaar": "^2.8.0",
-    "eslint-plugin-jsdoc": "^37.9.7",
-    "jsdoc-to-markdown": "^7.1.1"
+    "eslint": "^8.57.0",
+    "eslint-config-digitalbazaar": "^5.2.0",
+    "eslint-plugin-jsdoc": "^48.10.2",
+    "eslint-plugin-unicorn": "^55.0.0"
   },
   "engines": {
     "node": ">=18"
