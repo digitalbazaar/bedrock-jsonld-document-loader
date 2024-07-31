@@ -1,5 +1,14 @@
 # bedrock-jsonld-document-loader ChangeLog
 
+## 5.1.0 - 2024-xx-xx
+
+### Changed
+- Update dependencies.
+  - `@digitalbazaar/http-client@4.1.1`.
+  - `jsonld-document-loader@2.2.0`.
+    - Adds `addDocuments()` function.
+- Update linting and test dependencies.
+
 ## 5.0.0 - 2024-03-17
 
 ### Changed

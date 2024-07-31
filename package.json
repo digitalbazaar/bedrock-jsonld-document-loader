@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-jsonld-document-loader",
   "dependencies": {
-    "@digitalbazaar/http-client": "^4.0.0",
-    "jsonld-document-loader": "^2.0.0"
+    "@digitalbazaar/http-client": "^4.1.1",
+    "jsonld-document-loader": "^2.2.0"
   },
   "peerDependencies": {
     "@bedrock/core": "^6.0.0",
