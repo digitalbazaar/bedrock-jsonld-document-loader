@@ -1,4 +1,4 @@
-# JSON-LD Document Loader _(bedrock-jsonld-document-loader)_
+# JSON-LD Document Loader _(@bedrock/jsonld-document-loader)_
 
 [![Build Status](https://img.shields.io/github/workflow/status/digitalbazaar/bedrock-jsonld-document-loader/Node.js%20CI)](https://github.com/digitalbazaar/bedrock-jsonld-document-loader/actions?query=workflow%3A%22Node.js+CI%22)
 [![NPM Version](https://img.shields.io/npm/v/bedrock-jsonld-document-loader.svg)](https://npm.im/bedrock-jsonld-document-loader)
@@ -7,21 +7,11 @@
 
 ## Table of Contents
 
-- [Background](#background)
-- [Security](#security)
 - [Install](#install)
 - [Usage](#usage)
 - [Contribute](#contribute)
 - [Commercial Support](#commercial-support)
 - [License](#license)
-
-## Background
-
-TBD
-
-## Security
-
-TBD
 
 ## Install
 
@@ -31,7 +21,7 @@ TBD
 
 To install via NPM:
 
-```
+```sh
 npm install --save @bedrock/jsonld-document-loader
 ```
 
@@ -39,7 +29,7 @@ npm install --save @bedrock/jsonld-document-loader
 
 To install locally (for development):
 
-```
+```sh
 git clone https://github.com/digitalbazaar/bedrock-jsonld-document-loader.git
 cd bedrock-jsonld-document-loader
 npm install
