@@ -1,5 +1,10 @@
 # bedrock-jsonld-document-loader ChangeLog
 
+## 5.2.0 - 2024-12-xx
+
+### Changed
+- Handle parsing of JSON internally when `content-type` does not include `json`.
+
 ## 5.1.0 - 2024-07-31
 
 ### Changed
