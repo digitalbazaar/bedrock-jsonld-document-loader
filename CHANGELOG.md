@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 5.2.0 - 2025-mm-dd
+## 5.2.0 - 2025-01-30
 
 ### Changed
 - Update dependencies.
