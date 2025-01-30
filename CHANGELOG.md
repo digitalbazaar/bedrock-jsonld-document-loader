@@ -1,5 +1,12 @@
 # bedrock-jsonld-document-loader ChangeLog
 
+## 5.2.0 - 2025-mm-dd
+
+### Changed
+- Update dependencies.
+  - `jsonld-document-loader@2.3.0`.
+    - Adds `clone()` function.
+
 ## 5.1.0 - 2024-07-31
 
 ### Changed
