@@ -1,5 +1,11 @@
 # bedrock-jsonld-document-loader ChangeLog
 
+## 5.2.1 - 2025-12-dd
+
+### Fixed
+- Improve errors thrown from `httpClientHandler`. Errors will be now be
+  `BedrockError` instances that include the `httpStatusCode` returned.
+
 ## 5.2.0 - 2025-01-30
 
 ### Changed
