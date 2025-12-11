@@ -46,6 +46,16 @@ app.get('/documents/status/404',
   (req, res, next) => {
     res.sendStatus(404);
   });
+app.get('/documents/status/403',
+  // eslint-disable-next-line no-unused-vars
+  (req, res, next) => {
+    res.sendStatus(403);
+  });
+app.get('/documents/status/503',
+  // eslint-disable-next-line no-unused-vars
+  (req, res, next) => {
+    res.sendStatus(503);
+  });
 
 let server;
 before(async () => {
@@ -59,7 +69,7 @@ describe('bedrock-jsonld-document-loader', () => {
   it('throws NotFoundError on document not found', async () => {
     let result;
     let error;
-    const documentUrl = 'https://example.com/foo.jsonld';
+    const documentUrl = `${BASE_URL}/documents/foo.jsonld`;
     try {
       result = await documentLoader(documentUrl);
     } catch(e) {
@@ -73,7 +83,7 @@ describe('bedrock-jsonld-document-loader', () => {
   it('properly returns a document', async () => {
     let result;
     let error;
-    const documentUrl = 'https://example.com/foo.jsonld';
+    const documentUrl = `${BASE_URL}/documents/foo.jsonld`;
     const sampleDoc = {
       '@context': 'https://schema.org/',
       name: 'John Doe'
@@ -126,11 +136,12 @@ describe('httpClientHandler', () => {
     should.exist(error);
     should.not.exist(result);
     error.message.should.equal('NotFoundError');
+    error.name.should.equal('NotSupportedError');
   });
   it('throws error if document is not found', async () => {
     let result;
     let error;
-    const documentUrl = 'https://example.com/status/404';
+    const documentUrl = `${BASE_URL}/documents/status/404`;
 
     try {
       result = await httpClientHandler.get({url: documentUrl});
@@ -140,5 +151,38 @@ describe('httpClientHandler', () => {
     should.exist(error);
     should.not.exist(result);
     error.message.should.equal('NotFoundError');
+    error.details.httpStatusCode.should.equal(404);
+  });
+  it('throws error if fetching document is not allowed', async () => {
+    let result;
+    let error;
+    const documentUrl = `${BASE_URL}/documents/status/403`;
+
+    try {
+      result = await httpClientHandler.get({url: documentUrl});
+    } catch(e) {
+      error = e;
+    }
+    should.exist(error);
+    should.not.exist(result);
+    error.message.should.equal('NotFoundError');
+    error.name.should.equal('NotAllowedError');
+    error.details.httpStatusCode.should.equal(403);
+  });
+  it('throws error if server is unavailable', async () => {
+    let result;
+    let error;
+    const documentUrl = `${BASE_URL}/documents/status/503`;
+
+    try {
+      result = await httpClientHandler.get({url: documentUrl});
+    } catch(e) {
+      error = e;
+    }
+    should.exist(error);
+    should.not.exist(result);
+    error.message.should.equal('NotFoundError');
+    error.name.should.equal('TimeoutError');
+    error.details.httpStatusCode.should.equal(503);
   });
 });
