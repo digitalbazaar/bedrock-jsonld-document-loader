@@ -1,6 +1,6 @@
 # bedrock-jsonld-document-loader ChangeLog
 
-## 5.2.1 - 2025-12-dd
+## 5.2.1 - 2025-12-11
 
 ### Fixed
 - Improve errors thrown from `httpClientHandler`. Errors will be now be
